@@ -252,7 +252,7 @@ const FooterSection = ({ title, links }: any) => {
 					isOpen ? 'max-sm:block' : 'max-sm:hidden'
 				}`}
 			>
-				{links.map((link: string, index: number) => (
+				{links.map((link: any, index: number) => (
 					<li key={index}>
 						<a
 							href={'/'}
@@ -260,7 +260,7 @@ const FooterSection = ({ title, links }: any) => {
 							target={'_blank'}
 							rel={''}
 						>
-							{link}
+							{link.text}
 						</a>
 					</li>
 				))}
