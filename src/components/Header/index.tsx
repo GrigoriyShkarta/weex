@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react'
-import Arrow from '../../assets/svg/Arrow'
+import { useState } from 'react'
 import CubeIcon from '../../assets/svg/CubeIcon'
 import DropdownFutures from './DropdownFutures'
 import DropdownMain from './DropdownMain'
@@ -12,9 +11,9 @@ import SearchDropdown from './SearchDropdown'
 
 const Header = () => {
 	const [activeDropdown, setActiveDropdown] = useState(null)
-	let timeoutId = null
+	let timeoutId: number | undefined = undefined
 
-	const handleMouseEnter = dropdown => {
+	const handleMouseEnter = (dropdown: any) => {
 		clearTimeout(timeoutId)
 		setActiveDropdown(dropdown)
 	}

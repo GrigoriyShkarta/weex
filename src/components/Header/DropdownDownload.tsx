@@ -11,8 +11,8 @@ const DropdownDownload = () => {
 			<div className='w-[112px] h-[112px] my-[16px] mx-[auto]'>
 				<div className='w-[112px] h-[112px] bg-[#fff] rounded-[10px]'>
 					<div
-						value='https://support.weex.today/register?languageType=0'
-						level='H'
+						// value='https://support.weex.today/register?languageType=0'
+						// level='H'
 						className='bg-[#fff]'
 					>
 						<canvas

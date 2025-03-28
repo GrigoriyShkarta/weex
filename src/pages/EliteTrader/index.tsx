@@ -4,7 +4,7 @@ import CarouselItem from '../../components/Card'
 
 const EliteTrader = () => {
 	const [count, setCount] = useState(0)
-	const [hoveredIndex, setHoveredIndex] = useState(null)
+	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 	const [index, setIndex] = useState(0)
 	const targetAmount = 10000000
 	const duration = 3 // seconds
@@ -32,7 +32,7 @@ const EliteTrader = () => {
 	const cardCount = 15
 	const cards = Array.from({ length: cardCount }, (_, i) => i)
 
-	const [activeIndex, setActiveIndex] = useState(null)
+	const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
 	const faqItems = [
 		{
@@ -70,7 +70,7 @@ const EliteTrader = () => {
 		setIndex(prev => (prev === 0 ? cards.length - 1 : prev - 1))
 	}
 
-	const toggleItem = index => {
+	const toggleItem = (index: number) => {
 		setActiveIndex(activeIndex === index ? null : index)
 	}
 
@@ -242,7 +242,7 @@ const EliteTrader = () => {
 								key={index}
 								index={index}
 								isHovered={hoveredIndex === index}
-								onHoverStart={() => setHoveredIndex(index)}
+								onHoverStart={() => setHoveredIndex(index as number)}
 								onHoverEnd={() => setHoveredIndex(null)}
 							/>
 						))}

@@ -3,8 +3,8 @@ import { useRef, useState, useEffect } from 'react'
 import CarouselItem from '../../../components/Card'
 
 const InfiniteCarousel = () => {
-	const [hoveredIndex, setHoveredIndex] = useState(null)
-	const carouselRef = useRef()
+	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+	const carouselRef = useRef<HTMLDivElement>(null)
 
 	// Количество карточек (можно увеличить)
 	const cardCount = 15
@@ -14,12 +14,12 @@ const InfiniteCarousel = () => {
 		const carousel = carouselRef.current
 		if (!carousel) return
 
-		let animationId
-		let speed = 1
+		let animationId: number
+		const speed = 1
 		let position = 0
 		let lastTime = 0
 
-		const animate = time => {
+		const animate = (time: any) => {
 			if (!lastTime) lastTime = time
 			const delta = time - lastTime
 			lastTime = time
