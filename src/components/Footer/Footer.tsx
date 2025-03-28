@@ -217,7 +217,7 @@ const Footer = () => {
 	)
 }
 
-const FooterSection = ({ title, links }) => {
+const FooterSection = ({ title, links }: any) => {
 	const [isOpen, setIsOpen] = useState(false)
 
 	return (
@@ -252,15 +252,15 @@ const FooterSection = ({ title, links }) => {
 					isOpen ? 'max-sm:block' : 'max-sm:hidden'
 				}`}
 			>
-				{links.map((link, index) => (
+				{links.map((link: string, index: number) => (
 					<li key={index}>
 						<a
 							href={'/'}
 							className='hover:text-[#d8ae15] block py-1 max-sm:py-[2.6vw] max-sm:px-[5vw]'
-							target={link.external ? '_blank' : '_self'}
-							rel={link.external ? 'noopener noreferrer' : ''}
+							target={'_blank'}
+							rel={''}
 						>
-							{link.text}
+							{link}
 						</a>
 					</li>
 				))}

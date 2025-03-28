@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-const CarouselItem = ({ isHovered, onHoverStart, onHoverEnd, index }) => {
+const CarouselItem = ({ isHovered, onHoverStart, onHoverEnd, index }: any) => {
 	// Генерация разных данных для каждой карточки
 	const roiValues = ['+145.05%', '+98.32%', '+210.75%', '+76.43%', '+185.90%']
 	const pnlValues = [
