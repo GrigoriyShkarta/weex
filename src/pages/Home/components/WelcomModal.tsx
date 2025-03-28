@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const WelcomeModal = ({ onClose }) => {
+const WelcomeModal = ({ onClose }: any) => {
 	const [isOpen, setIsOpen] = useState(true)
 	const [dontRemind, setDontRemind] = useState(false)
 

@@ -19,10 +19,10 @@ const MobileTrade = () => {
 					<div className='qrcode flex items-center mb-8 text-[14px] font-[500] mt-[64px] mx-0 max-sm:my-[24px] max-sm:mx-auto'>
 						<div className='download-qrcode-show-content bg-white p-4 rounded-lg max-sm:w-[88px] max-sm:h-[88px]'>
 							<div
-								value='https://support.weex.today/register?languageType=0'
-								level='L'
-								background='#fff'
-								foreground='#000'
+							// value='https://support.weex.today/register?languageType=0'
+							// level='L'
+							// background='#fff'
+							// foreground='#000'
 							>
 								<canvas
 									height='294'

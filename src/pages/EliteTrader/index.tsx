@@ -229,7 +229,7 @@ const EliteTrader = () => {
 						dragConstraints={{ left: -((cards.length - 1) * 300), right: 0 }}
 						animate={{ x: -index * 300 }}
 						transition={{ type: 'spring', stiffness: 120 }}
-						onDragEnd={(event, info) => {
+						onDragEnd={(_, info) => {
 							if (info.offset.x < -50) {
 								nextSlide()
 							} else if (info.offset.x > 50) {

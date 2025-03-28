@@ -43,7 +43,7 @@ const MultiBannerSlider = () => {
 	const handlers = useSwipeable({
 		onSwipedLeft: () => scrollTo('right'),
 		onSwipedRight: () => scrollTo('left'),
-		preventDefaultTouchmoveEvent: true,
+		// preventDefaultTouchmoveEvent: true,
 		trackMouse: true,
 	})
 
