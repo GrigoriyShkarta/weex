@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+@import 'tailwindcss';
+@import 'tailwindcss';
+@import 'tailwindcss';
+@import 'tailwindcss';
+
+body {
+	background-color: #000 !important;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	color: #000;
+	font-family: PlusJakartaSans-Regular, Arial-Regular, -apple-system,
+		BlinkMacSystemFont, sans-serif;
+	font-weight: 400;
+	background-color: #111;
+	font-size: 16px;
+	line-height: 1.4;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
