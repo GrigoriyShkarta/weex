@@ -31,7 +31,7 @@ const PopularEvent = () => {
 								/>
 							</section>
 						</div>
-						<button className='absolute bottom-4 left-4 right-4 sm:bottom-[24px] sm:w-[148px] sm:left-auto h-10 rounded-xl bg-white text-sm font-medium leading-10 text-center cursor-pointer text-[#161616] font-sans hover:bg-[#e6e6e6]'>
+						<button className='absolute bottom-4 left-4 right-4 sm:bottom-[24px] sm:w-[148px] h-10 rounded-xl bg-white text-sm font-medium leading-10 text-center cursor-pointer text-[#161616] font-sans hover:bg-[#e6e6e6]'>
 							Join Now
 						</button>
 					</a>
@@ -60,7 +60,7 @@ const PopularEvent = () => {
 								/>
 							</section>
 						</div>
-						<button className='absolute bottom-4 left-4 right-4 sm:bottom-[24px] sm:w-[148px] sm:left-auto h-10 rounded-xl bg-white text-sm font-medium leading-10 text-center cursor-pointer text-[#161616] font-sans hover:bg-[#e6e6e6]'>
+						<button className='absolute bottom-4 left-4 right-4 sm:bottom-[24px] sm:w-[148px] h-10 rounded-xl bg-white text-sm font-medium leading-10 text-center cursor-pointer text-[#161616] font-sans hover:bg-[#e6e6e6]'>
 							Join Now
 						</button>
 					</a>
@@ -89,7 +89,7 @@ const PopularEvent = () => {
 								/>
 							</section>
 						</div>
-						<button className='absolute bottom-4 left-4 right-4 sm:bottom-[24px] sm:w-[148px] sm:left-auto h-10 rounded-xl bg-white text-sm font-medium leading-10 text-center cursor-pointer text-[#161616] font-sans hover:bg-[#e6e6e6]'>
+						<button className='absolute bottom-4 left-4 right-4 sm:bottom-[24px] sm:w-[148px] h-10 rounded-xl bg-white text-sm font-medium leading-10 text-center cursor-pointer text-[#161616] font-sans hover:bg-[#e6e6e6]'>
 							Join Now
 						</button>
 					</a>
