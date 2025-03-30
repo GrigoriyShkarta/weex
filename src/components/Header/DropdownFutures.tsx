@@ -4,7 +4,14 @@ const DropdownFutures = () => {
 			<section className='bg-[#222] rounded-[24px] shadow-lg p-3'>
 				{/* Первый элемент с hover эффектом */}
 				<div className='group cursor-pointer rounded-[16px] p-3 flex items-center hover:bg-[#333] transition-colors duration-200'>
-					<div className='w-6 h-6 bg-gray-500 rounded'></div>{' '}
+					<div className='w-6 h-6'>
+						<img
+							src='https://www.weex.com/_nuxt/img/black-icon1.7af7f5c.svg'
+							alt='hot'
+							data-v-23812cb2=''
+							data-v-2b19e9fd=''
+						/>
+					</div>{' '}
 					{/* Замените на вашу иконку */}
 					<div className='ml-3 w-[196px]'>
 						<div className='flex items-center'>
@@ -27,7 +34,14 @@ const DropdownFutures = () => {
 
 				{/* Второй элемент с hover эффектом */}
 				<div className='mt-3 group cursor-pointer rounded-[16px] p-3 flex items-center hover:bg-[#333] transition-colors duration-200'>
-					<div className='w-6 h-6 bg-gray-500 rounded'></div>{' '}
+					<div className='w-6 h-6'>
+						<img
+							src='https://www.weex.com/_nuxt/img/black-icon2.5b0aacc.svg'
+							alt='hot'
+							data-v-23812cb2=''
+							data-v-2b19e9fd=''
+						/>
+					</div>{' '}
 					{/* Замените на вашу иконку */}
 					<div className='ml-3 w-[196px]'>
 						<span className='text-sm font-bold text-white'>Demo trading</span>
@@ -39,7 +53,15 @@ const DropdownFutures = () => {
 
 				{/* Третий элемент с hover эффектом */}
 				<div className='mt-3 group cursor-pointer rounded-[16px] p-3 flex items-center hover:bg-[#333] transition-colors duration-200'>
-					<div className='w-6 h-6 bg-gray-500 rounded'></div>{' '}
+					<div className='w-6 h-6'>
+						<img
+							src='
+								data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzU4NDhfMjI2MjIpIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMiA0QzEwLjM0MzEgNCA5IDUuMzQzMTUgOSA3VjEzLjAzMjZIN1Y3QzcgNC4yMzg1OCA5LjIzODU4IDIgMTIgMkgxOEMyMC43NjE0IDIgMjMgNC4yMzg1OCAyMyA3VjE3QzIzIDE5Ljc2MTQgMjAuNzYxNCAyMiAxOCAyMkg1VjIwSDE4QzE5LjY1NjkgMjAgMjEgMTguNjU2OSAyMSAxN1Y3QzIxIDUuMzQzMTUgMTkuNjU2OSA0IDE4IDRIMTJaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTQgMTJDMy40NDc3MiAxMiAzIDEyLjQ0NzcgMyAxM1YxOEMzIDE5LjEwNDYgMy44OTU0MyAyMCA1IDIwQzYuMTA0NTcgMjAgNyAxOS4xMDQ2IDcgMThWMTNDNyAxMi40NDc3IDYuNTUyMjggMTIgNiAxMkg0Wk0xIDEzQzEgMTEuMzQzMSAyLjM0MzE1IDEwIDQgMTBINkM3LjY1Njg1IDEwIDkgMTEuMzQzMSA5IDEzVjE4QzkgMjAuMjA5MSA3LjIwOTE0IDIyIDUgMjJDMi43OTA4NiAyMiAxIDIwLjIwOTEgMSAxOFYxM1oiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjE1IiB5PSI4LjUiIHdpZHRoPSIzIiBoZWlnaHQ9IjIiIGZpbGw9IiNFNkMzMjUiLz4KPHJlY3QgeD0iMTIiIHk9IjExLjUiIHdpZHRoPSI2IiBoZWlnaHQ9IjIiIGZpbGw9IiNFNkMzMjUiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF81ODQ4XzIyNjIyIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo='
+							alt='hot'
+							data-v-23812cb2=''
+							data-v-2b19e9fd=''
+						/>
+					</div>{' '}
 					{/* Замените на вашу иконку */}
 					<div className='ml-3 w-[196px]'>
 						<span className='text-sm font-bold text-white'>About futures</span>

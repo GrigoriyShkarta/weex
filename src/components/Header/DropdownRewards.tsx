@@ -30,7 +30,12 @@ const DropdownRewards = () => {
 					<section className='w-[196px] text-left'>
 						<div className='font-bold text-[14px] text-[#fff] flex gap-[4px]'>
 							Hot Token Airdrop
-							<img src='/' alt='new' className='w-[28px] h-[16px]' />
+							<img
+								src='https://www.weex.com/_nuxt/img/new-icon.2e99f0c.svg
+'
+								alt='new'
+								className='w-[28px] h-[16px]'
+							/>
 						</div>
 						<div className='mt-[6px] text-[12px] text-[#8b8b8e]'>
 							Deposit and trade to get popular tokens
@@ -54,7 +59,12 @@ const DropdownRewards = () => {
 					<section className='w-[196px] text-left'>
 						<div className='font-bold text-[14px] text-[#fff] flex gap-[4px]'>
 							VIP Exclusive
-							<img src='/' alt='new' className='w-[28px] h-[16px]' />
+							<img
+								src='https://www.weex.com/_nuxt/img/new-icon.2e99f0c.svg
+'
+								alt='new'
+								className='w-[28px] h-[16px]'
+							/>
 						</div>
 						<div className='mt-[6px] text-[12px] text-[#8b8b8e]'>
 							Trade for exclusive airdrops

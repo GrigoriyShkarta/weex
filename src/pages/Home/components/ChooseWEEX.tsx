@@ -76,7 +76,8 @@ const ChooseWEEX = () => {
 						controls={isPlaying}
 						preload='auto'
 						playsInline
-						poster='/assets/images/new_index/cover.jpg'
+						poster='https://d2tfhb4luz96yb.cloudfront.net/otc/images/mainBanner/c9ead288d78581f894f04c97c35391c9.webp
+'
 						controlsList='nodownload'
 						className='w-full rounded-lg'
 						onClick={() => setIsPlaying(true)}

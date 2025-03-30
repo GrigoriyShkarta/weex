@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import CubeIcon from '../../assets/svg/CubeIcon'
 import DropdownFutures from './DropdownFutures'
 import DropdownMain from './DropdownMain'
@@ -8,9 +8,11 @@ import Download from '../../assets/svg/Download'
 import DropdownDownload from './DropdownDownload'
 import World from '../../assets/svg/World'
 import SearchDropdown from './SearchDropdown'
+import MobileMenu from '../Drower'
 
 const Header = () => {
 	const [activeDropdown, setActiveDropdown] = useState(null)
+	const [isOpen, setIsOpen] = useState(false)
 	let timeoutId: number | undefined = undefined
 
 	const handleMouseEnter = (dropdown: any) => {
@@ -19,8 +21,24 @@ const Header = () => {
 	}
 
 	const handleMouseLeave = () => {
-		timeoutId = setTimeout(() => setActiveDropdown(null), 300) // Задержка 300 мс перед скрытием
+		timeoutId = setTimeout(() => setActiveDropdown(null), 300)
 	}
+
+	useEffect(() => {
+		if (isOpen) {
+			document.body.style.overflow = 'hidden'
+			document.body.style.touchAction = 'none'
+		} else {
+			document.body.style.overflow = ''
+			document.body.style.touchAction = ''
+		}
+
+		// Очистка эффекта
+		return () => {
+			document.body.style.overflow = ''
+			document.body.style.touchAction = ''
+		}
+	}, [isOpen])
 
 	return (
 		<header className='pt-[65px]'>
@@ -229,13 +247,14 @@ const Header = () => {
 					</ul>
 				</div>
 
-				<div className='hidden max-sm:block'>
+				<div className='hidden max-sm:block' onClick={() => setIsOpen(true)}>
 					<img
 						src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAU5JREFUeF7t3EGOg0AQBEHm/48eX5dz54FehR+QYoLCkiXk8/ikAietiT1A4xEABRoLxDkLBRoLxDkL/RrovffG17Q6N14o0Pf9Bxo/D0CBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkK/Bhpfz/rceKHrBeIDAAUaC8Q5CwUaC8Q5CwUaC8Q5CwUaC8Q5CwUaC8Q5CwUaC8Q5CwUaC8S58UK3v4pzzhkb/L0n4xjQ98SBWmj7peeRbz0foEBjgThnoUBjgThnoUBjgThnof8dND7f+tz4p+d6gfgAQIHGAnHOQoHGAnHOQoHGAnHOQoHGAnHOQoHGAnHOQoHGAnHOQoHGAnFuvNDtr+LEnvO/uwT6viUWGk8UKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5Z6NdA4+tZnxsvdL1AfACgQGOBOGehQGOBOGehQGOBOPcDmfSP9WvkUZIAAAAASUVORK5CYII='
-						className='w-[25px] h-[25px] absolute top-[3vw] right-[4vw]'
+						className='w-[25px] h-[25px] absolute top-[5vw] right-[4vw]'
 					/>
 				</div>
 			</nav>
+			{isOpen && <MobileMenu setIsOpen={setIsOpen} />}
 		</header>
 	)
 }
