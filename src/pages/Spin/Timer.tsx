@@ -3,13 +3,11 @@ import React, { useState, useEffect } from 'react'
 interface CountdownProps {
 	targetDate: Date
 	prefixText?: string
-	darkMode?: boolean
 }
 
 const CountdownTimer: React.FC<CountdownProps> = ({
 	targetDate,
 	prefixText = 'Ends in:',
-	darkMode = false,
 }) => {
 	const [timeLeft, setTimeLeft] = useState({
 		days: 0,

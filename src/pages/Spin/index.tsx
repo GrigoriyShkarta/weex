@@ -271,7 +271,7 @@ const Spin = () => {
 				</div>
 			</div>
 			<div className='mt-[96px] mx-auto w-[1200px] rounded-[32px] px-[24px] py-[40px]  border border-[#2e2e2e] max-sm:w-full max-sm:border-none'>
-				<CountdownTimer targetDate={targetDate} darkMode={true} />
+				<CountdownTimer targetDate={targetDate} />
 			</div>
 			<TaskComponent />
 			<div className='mt-[96px] mx-auto w-[1200px] max-sm:w-full max-sm:border-none max-sm:px-[4.2vw] max-sm:mt-0'>
