@@ -125,7 +125,7 @@ const TRUMB = () => {
 			<div className='item mt-[80px] border border-[#2e2e2e] rounded-[24px] p-[32px] max-sm:my-[40px]'>
 				<button
 					onClick={() => setShowRules(!showRules)}
-					className='w-full flex justify-between items-center text-left'
+					className='w-full flex justify-between items-center text-left cursor-pointer'
 				>
 					<h2 className='text-white font-[700] text-[24px] max-sm:text-[16px]'>
 						Event rules：

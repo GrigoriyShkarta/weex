@@ -292,7 +292,7 @@ const TaskComponent: React.FC = () => {
 									</div>
 
 									<div className='flex justify-between items-center p-3 bg-[#222] rounded-[16px] py-[24px] px-[40px] max-sm:flex-col max-sm:p-[12px]'>
-										<div className='flex space-x-3 flex-col max-sm:flex-row max-sm:justify-between w-full max-sm:items-center max-sm:mb-[20px]'>
+										<div className='flex space-x-3 flex-col max-sm:w-full max-sm:mb-[20px] max-sm:flex-row max-sm:justify-between max-sm:items-center'>
 											<span className='text-[16px] font-[500] text-[#8b8b8e]'>
 												Cumulative
 											</span>

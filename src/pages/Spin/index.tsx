@@ -219,7 +219,7 @@ const Spin = () => {
 									11.03, 18:00:00 - 10.04, 06:59:59 (UTC+3)
 								</div>
 								<img
-									src='https://www.weex.com/static/images/lottery/darts-bg.webphttps://www.weex.com/static/images/lottery/dart-title.png'
+									src='https://www.weex.com/static/images/lottery/dart-title.png'
 									alt='img'
 									className='text-transparent absolute right-[120px] bottom-[-30px] w-[90px] h-[90px]'
 								/>
