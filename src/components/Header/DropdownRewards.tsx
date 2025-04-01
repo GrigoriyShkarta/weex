@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const DropdownRewards = () => {
 	return (
 		<div className='absolute top-[40px] cursor-pointer bg-[#262626] flex rounded-[24px] shadow-[0_2px_14px_0_rgba(0,0,0,0.12)]'>
@@ -5,7 +7,31 @@ const DropdownRewards = () => {
 				<div className='ml-[12px] mt-[8px] text-[16px] font-bold mb-[24px] text-left text-[#fff]'>
 					Spot trading event
 				</div>
-				<div className='pointer rounded-[16px] py-[8px] px-[12px] flex gap-[12px] items-center min-h-[53px] hover:bg-[#333]'>
+
+				<Link
+					to='/events/promo/airdrop-rewards-wxt-holders-1'
+					className='pointer rounded-[16px] py-[8px] px-[12px] flex gap-[12px] items-center min-h-[53px] hover:bg-[#333]'
+				>
+					<img
+						data-v-e9412b38=''
+						src='https://d2tfhb4luz96yb.cloudfront.net/otc/images/navigationBar/adb49c63d2c057152a77e75185cb5797.png'
+						alt=''
+						className='w-[24px] h-[24px]'
+					/>
+					<section className='w-[196px] text-left'>
+						<div className='font-bold text-[14px] text-[#fff]'>
+							Spot Trading Match
+						</div>
+						<div className='mt-[6px] text-[12px] text-[#8b8b8e]'>
+							Weex spot airdrop
+						</div>
+					</section>
+				</Link>
+
+				<Link
+					to='events/promo/airdrop-rewards-wxt-holders-2'
+					className='pointer rounded-[16px] py-[8px] px-[12px] flex gap-[12px] items-center min-h-[53px] hover:bg-[#333]'
+				>
 					<img
 						data-v-e9412b38=''
 						src='https://d2tfhb4luz96yb.cloudfront.net/otc/images/navigationBar/9698a05a30f7e2d687609cc5ee16a8a2.png'
@@ -18,9 +44,12 @@ const DropdownRewards = () => {
 							Hold WXT to win airdrops
 						</div>
 					</section>
-				</div>
+				</Link>
 
-				<div className='mt-[12px] pointer rounded-[16px] py-[8px] px-[12px] flex gap-[12px] items-center min-h-[53px] hover:bg-[#333]'>
+				<Link
+					to='events/promo/GHIBLI'
+					className='mt-[12px] pointer rounded-[16px] py-[8px] px-[12px] flex gap-[12px] items-center min-h-[53px] hover:bg-[#333]'
+				>
 					<img
 						data-v-e9412b38=''
 						src='https://d2tfhb4luz96yb.cloudfront.net/otc/images/navigationBar/b2d2ebd79161e23c77b8e5820796b98e.png'
@@ -41,7 +70,7 @@ const DropdownRewards = () => {
 							Deposit and trade to get popular tokens
 						</div>
 					</section>
-				</div>
+				</Link>
 			</section>
 
 			<section className='border-l-[1px] border-[#0f0f0f] py-[12px] px-[24px]'>
@@ -49,7 +78,10 @@ const DropdownRewards = () => {
 					Futures trading event
 				</div>
 
-				<div className='mt-[12px] pointer rounded-[16px] py-[8px] px-[12px] flex gap-[12px] items-center min-h-[53px] hover:bg-[#333]'>
+				<Link
+					to='events/promo/vip-exclusive5'
+					className='mt-[12px] pointer rounded-[16px] py-[8px] px-[12px] flex gap-[12px] items-center min-h-[53px] hover:bg-[#333]'
+				>
 					<img
 						data-v-e9412b38=''
 						src='https://d2tfhb4luz96yb.cloudfront.net/otc/images/navigationBar/c5093f9ae5d20fc462ab4af68b7ea902.png'
@@ -60,8 +92,7 @@ const DropdownRewards = () => {
 						<div className='font-bold text-[14px] text-[#fff] flex gap-[4px]'>
 							VIP Exclusive
 							<img
-								src='https://www.weex.com/_nuxt/img/new-icon.2e99f0c.svg
-'
+								src='https://www.weex.com/_nuxt/img/new-icon.2e99f0c.svg'
 								alt='new'
 								className='w-[28px] h-[16px]'
 							/>
@@ -70,9 +101,12 @@ const DropdownRewards = () => {
 							Trade for exclusive airdrops
 						</div>
 					</section>
-				</div>
+				</Link>
 
-				<div className='pointer rounded-[16px] py-[8px] px-[12px] flex gap-[12px] items-center min-h-[53px] hover:bg-[#333]'>
+				<Link
+					to='events/welcome-event'
+					className='pointer rounded-[16px] py-[8px] px-[12px] flex gap-[12px] items-center min-h-[53px] hover:bg-[#333]'
+				>
 					<img
 						data-v-e9412b38=''
 						src='https://d2tfhb4luz96yb.cloudfront.net/otc/images/navigationBar/b05f0fba665c76a9d5e241e30d8d08ff.png'
@@ -87,9 +121,12 @@ const DropdownRewards = () => {
 							Kickstart your trading journey!
 						</div>
 					</section>
-				</div>
+				</Link>
 
-				<div className='pointer rounded-[16px] py-[8px] px-[12px] flex gap-[12px] items-center min-h-[53px] hover:bg-[#333]'>
+				<Link
+					to='events/promo/copy-trade-pro-15'
+					className='pointer rounded-[16px] py-[8px] px-[12px] flex gap-[12px] items-center min-h-[53px] hover:bg-[#333]'
+				>
 					<img
 						data-v-e9412b38=''
 						src='https://d2tfhb4luz96yb.cloudfront.net/otc/images/navigationBar/c69df1a2d9f55a4d019ae2b191835548.png'
@@ -104,9 +141,12 @@ const DropdownRewards = () => {
 							Copy Trading 2025
 						</div>
 					</section>
-				</div>
+				</Link>
 
-				<div className='pointer rounded-[16px] py-[8px] px-[12px] flex gap-[12px] items-center min-h-[53px] hover:bg-[#333]'>
+				<Link
+					to='events/draw/spin-14'
+					className='pointer rounded-[16px] py-[8px] px-[12px] flex gap-[12px] items-center min-h-[53px] hover:bg-[#333]'
+				>
 					<img
 						data-v-e9412b38=''
 						src='https://d2tfhb4luz96yb.cloudfront.net/otc/images/navigationBar/f30504164a6108e2a068d04c6a6ca0a8.png'
@@ -128,7 +168,27 @@ const DropdownRewards = () => {
 							Complete daily tasks to win great rewards!
 						</div>
 					</section>
-				</div>
+				</Link>
+
+				<Link
+					to='events/promo/trumpusdt'
+					className='pointer rounded-[16px] py-[8px] px-[12px] flex gap-[12px] items-center min-h-[53px] hover:bg-[#333]'
+				>
+					<img
+						data-v-e9412b38=''
+						src='https://d2tfhb4luz96yb.cloudfront.net/otc/images/navigationBar/c69df1a2d9f55a4d019ae2b191835548.png'
+						alt=''
+						className='w-[24px] h-[24px]'
+					/>
+					<section className='w-[196px] text-left'>
+						<div className='font-bold text-[14px] text-[#fff] flex gap-[4px] items-center'>
+							TRUMB Completition
+						</div>
+						<div className='mt-[6px] text-[12px] text-[#8b8b8e]'>
+							Trade TRUMP to win great rewards!
+						</div>
+					</section>
+				</Link>
 			</section>
 		</div>
 	)
