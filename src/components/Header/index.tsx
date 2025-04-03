@@ -9,6 +9,7 @@ import DropdownDownload from './DropdownDownload'
 import World from '../../assets/svg/World'
 import SearchDropdown from './SearchDropdown'
 import MobileMenu from '../Drower'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 	const [activeDropdown, setActiveDropdown] = useState(null)
@@ -41,8 +42,8 @@ const Header = () => {
 	}, [isOpen])
 
 	return (
-		<header className='pt-[65px]'>
-			<nav className='fixed box-border px-6 w-full left-0 top-0 h-[65px] z-[2000] flex bg-[black]'>
+		<header className='pt-[65px] max-sm:w-full'>
+			<nav className='fixed box-border px-6 w-full left-0 top-0 h-[65px] z-[2000] flex bg-[black] max-sm:w-full'>
 				<div className='h-full flex items-center'>
 					<a href='/' className='flex '>
 						<img
@@ -123,12 +124,12 @@ const Header = () => {
 						<li className='flex items-center relative'>
 							<div className='relative inline-block'>
 								<div className='flex items-center pointer'></div>
-								<a
-									href='/'
+								<Link
+									to='/copy-trading'
 									className='text-[#fff] pointer hover:text-[#d8ae15] transition-colors duration-200'
 								>
 									Copy Trade
-								</a>
+								</Link>
 							</div>
 						</li>
 
@@ -141,7 +142,7 @@ const Header = () => {
 									data-v-2b19e9fd=''
 								/>
 								<a
-									href='/'
+									href='/we-launch'
 									className='text-[#fff] pointer hover:text-[#d8ae15] transition-colors duration-200'
 								>
 									WE-Launch
@@ -213,22 +214,22 @@ const Header = () => {
 						<li className='flex items-center relative'>
 							<div className='relative inline-block'>
 								<div className='flex items-center pointer'></div>
-								<a
-									href='/'
+								<Link
+									to='/login'
 									className='text-[#fff] pointer hover:text-[#d8ae15] transition-colors duration-200'
 								>
 									Log In
-								</a>
+								</Link>
 							</div>
 						</li>
 
 						<li>
-							<a
-								href='/'
+							<Link
+								to='/login'
 								className='flex bg-[#fff] text-[#161616!important] items-center justify-center rounded-[100px] h-[44px] px-[24px] text-[16px] '
 							>
 								Sign Up
-							</a>
+							</Link>
 						</li>
 
 						<li

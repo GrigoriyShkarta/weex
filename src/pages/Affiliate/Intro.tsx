@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import VideoModal from '../../components/VideoModal/inde'
+import VideoModal from '../../components/VideoModal'
 
 const Intro = () => {
 	const [showModal, setShowModal] = useState(false)

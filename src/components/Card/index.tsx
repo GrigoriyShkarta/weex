@@ -1,6 +1,13 @@
 import { motion } from 'framer-motion'
 
-const CarouselItem = ({ isHovered, onHoverStart, onHoverEnd, index }: any) => {
+const CarouselItem = ({
+	isHovered,
+	onHoverStart,
+	onHoverEnd,
+	index,
+	withoutBg,
+	fatCard,
+}: any) => {
 	// Генерация разных данных для каждой карточки
 	const roiValues = ['+145.05%', '+98.32%', '+210.75%', '+76.43%', '+185.90%']
 	const pnlValues = [
@@ -37,7 +44,13 @@ const CarouselItem = ({ isHovered, onHoverStart, onHoverEnd, index }: any) => {
 				when: 'afterChildren',
 			}}
 		>
-			<div className='w-[312px] mb-[32px] p-[24px] bg-[#222] rounded-[16px] cursor-pointer'>
+			<div
+				className={`mb-[32px] p-[24px] ${
+					withoutBg ? 'bg-transparent border border-[#282828]' : 'bg-[#222]'
+				} ${
+					!fatCard ? 'w-[383px]' : 'w-[312px]'
+				} rounded-[16px] cursor-pointer`}
+			>
 				<div className=' flex items-start '>
 					<div className='w-[50px] h-[50px]'>
 						<img

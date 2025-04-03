@@ -18,6 +18,16 @@ import WelcomeBonus from './pages/WelcomeBonus'
 import CopyTrade from './pages/CopyTrade'
 import Spin from './pages/Spin'
 import TRUMB from './pages/TRUMB'
+import WELaunch from './pages/WeLaunch'
+import About from './pages/AboutUs'
+import AmbassadorPage from './pages/Ambasador'
+import ProofOfReserves from './pages/Proof'
+import DownloadSection from './pages/Download'
+import AuthPage from './pages/Auth'
+import Forget from './pages/Forget'
+import VipPerks from './pages/VipPerks'
+import HowToBuyCrypto from './pages/HowToBuy'
+import CopyTradingPro from './pages/CopyTraidingPro'
 
 function App() {
 	return (
@@ -48,6 +58,18 @@ function App() {
 				<Route path='events/promo/copy-trade-pro-15' element={<CopyTrade />} />
 				<Route path='events/draw/spin-14' element={<Spin />} />
 				<Route path='events/promo/trumpusdt' element={<TRUMB />} />
+				<Route path='we-launch' element={<WELaunch />} />
+				<Route path='aboutus' element={<About />} />
+				<Route path='community' element={<About />} />
+				<Route path='Media-kit' element={<About />} />
+				<Route path='weex-owen' element={<AmbassadorPage />} />
+				<Route path='proof-of-reserves' element={<ProofOfReserves />} />
+				<Route path='download' element={<DownloadSection />} />
+				<Route path='login' element={<AuthPage />} />
+				<Route path='forget' element={<Forget />} />
+				<Route path='asset/rateDesc' element={<VipPerks />} />
+				<Route path='how-to-buy' element={<HowToBuyCrypto />} />
+				<Route path='copy-trading' element={<CopyTradingPro />} />
 			</Routes>
 			<Footer />
 		</Router>

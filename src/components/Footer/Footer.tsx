@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
 	return (
@@ -254,14 +255,13 @@ const FooterSection = ({ title, links }: any) => {
 			>
 				{links.map((link: any, index: number) => (
 					<li key={index}>
-						<a
-							href={'/'}
+						<Link
+							to={link.href}
 							className='hover:text-[#d8ae15] block py-1 max-sm:py-[2.6vw] max-sm:px-[5vw]'
-							target={'_blank'}
 							rel={''}
 						>
 							{link.text}
-						</a>
+						</Link>
 					</li>
 				))}
 			</ul>
