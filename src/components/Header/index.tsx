@@ -45,12 +45,12 @@ const Header = () => {
 		<header className='pt-[65px] max-sm:w-full'>
 			<nav className='fixed box-border px-6 w-full left-0 top-0 h-[65px] z-[2000] flex bg-[black] max-sm:w-full'>
 				<div className='h-full flex items-center'>
-					<a href='/' className='flex '>
+					<Link to='/' className='flex '>
 						<img
 							src='https://www.weex.com/_nuxt/img/logoweex_black.488d562.svg'
 							className='logo-weex'
 						/>
-					</a>
+					</Link>
 				</div>
 
 				<div className='flex-grow-0 w-6' />

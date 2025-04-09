@@ -45,8 +45,7 @@ const InfiniteCarousel = () => {
 		<div className='relative w-full mt-[51px] pb-[64px] max-sm:hidden'>
 			<motion.div
 				ref={carouselRef}
-				className='flex'
-				style={{ width: 'max-content' }}
+				style={{ width: 'max-content', display: 'flex' }}
 			>
 				{cards.map((_, index) => (
 					<CarouselItem

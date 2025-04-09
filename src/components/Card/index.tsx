@@ -32,7 +32,7 @@ const CarouselItem = ({
 
 	return (
 		<motion.div
-			className='swiper-slide px-2'
+			className=' px-2'
 			whileHover={{ scale: 1.05 }}
 			onHoverStart={onHoverStart}
 			onHoverEnd={onHoverEnd}
