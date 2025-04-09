@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper as SwiperClass } from 'swiper'
 
-// Import Swiper styles
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import 'swiper/css'
 // import 'swiper/css/free-mode'
 // import 'swiper/css/navigation'
@@ -12,15 +14,6 @@ import 'swiper/css'
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules'
 
-type Slide = {
-	id: number
-	imageUrl: string
-	title?: string
-	description?: string
-	buttonText?: string
-	linkUrl: string
-}
-
 type WelcomeModalProps = {
 	onClose?: () => void
 }
@@ -28,37 +21,7 @@ type WelcomeModalProps = {
 const WelcomeModal = ({ onClose }: WelcomeModalProps) => {
 	const [isOpen, setIsOpen] = useState(true)
 	const [dontRemind, setDontRemind] = useState(false)
-	const [currentSlide, setCurrentSlide] = useState(0)
-	const [thumbsSwiper, setThumbsSwiper] = useState(null)
-
-	// Массив слайдов
-	const slides: Slide[] = [
-		{
-			id: 1,
-			imageUrl:
-				'https://d2tfhb4luz96yb.cloudfront.net/otc/images/floatingWindow/a5c0ac1d213149d85ceae67246dc8fca.png',
-			title: 'Welcome Offer',
-			description: 'Special promotion for new users',
-			buttonText: 'Learn More',
-			linkUrl: '/promotion',
-		},
-		{
-			id: 2,
-			imageUrl: 'https://example.com/promo2.jpg',
-			title: 'Bonus Deposit',
-			description: 'Get 100% bonus on your first deposit',
-			buttonText: 'Claim Now',
-			linkUrl: '/deposit-bonus',
-		},
-		{
-			id: 3,
-			imageUrl: 'https://example.com/promo3.jpg',
-			title: 'VIP Program',
-			description: 'Join our exclusive VIP club',
-			buttonText: 'Discover Benefits',
-			linkUrl: '/vip',
-		},
-	]
+	const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null)
 
 	useEffect(() => {
 		const dontRemindUntil = localStorage.getItem('dontRemindUntil')
@@ -107,10 +70,6 @@ const WelcomeModal = ({ onClose }: WelcomeModalProps) => {
 					{/* Carousel content */}
 					<>
 						<Swiper
-							style={{
-								'--swiper-navigation-color': '#fff',
-								'--swiper-pagination-color': '#fff',
-							}}
 							spaceBetween={10}
 							navigation={true}
 							thumbs={{ swiper: thumbsSwiper }}
@@ -189,18 +148,6 @@ const WelcomeModal = ({ onClose }: WelcomeModalProps) => {
 							</SwiperSlide>
 						</Swiper>
 					</>
-
-					{/* Action button */}
-					<div className='p-4 text-center bg-[#0f1115]'>
-						<button
-							onClick={() => {
-								window.location.href = slides[currentSlide].linkUrl
-							}}
-							className='bg-[#ffe82d] hover:bg-[#ffed57] text-black font-[500] py-3 px-6 rounded-[16px] cursor-pointer transition-colors duration-200 w-[200px] h-[48px]'
-						>
-							{slides[currentSlide].buttonText || 'Learn More'}
-						</button>
-					</div>
 				</div>
 			</div>
 

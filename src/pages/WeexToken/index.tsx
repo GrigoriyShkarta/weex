@@ -47,13 +47,6 @@ const HowToBuyWeexToken: React.FC = () => {
 		}
 	}, [])
 
-	// Assign refs to sections
-	const assignRef = (id: string) => (el: HTMLElement | null) => {
-		if (el) {
-			sectionRefs.current[id] = el
-		}
-	}
-
 	const scrollToSection = (id: string) => {
 		const element = document.getElementById(id)
 		if (element) {
