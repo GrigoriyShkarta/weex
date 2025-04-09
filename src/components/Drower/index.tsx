@@ -30,7 +30,7 @@ const MobileMenu = ({ setIsOpen }: Props) => {
 	return (
 		<>
 			<div className='top-0 bg-[rgba(15,17,21,.6)] z-9'>
-				<div className='absolute bg-[#222] bg-no-repeat top-0 w-[80vw] h-full flex flex-col overflow-hidden z-9999 text-[4vw] right-0'>
+				<div className='fixed bg-[#222] bg-no-repeat top-0 w-[80vw] h-full flex flex-col overflow-hidden z-9999 text-[4vw] right-0'>
 					{/* Menu Header with Close Button */}
 					<div className='w-full h-[20vw]'>
 						<button

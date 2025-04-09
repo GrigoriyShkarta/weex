@@ -223,6 +223,14 @@ const EliteTrader = () => {
 
 			<div className='flex justify-center pt-[60px] relative'>
 				<div className='w-[1200px] pb-[40px] text-white bg-[#151515] relative overflow-hidden'>
+					{/* Кнопка влево */}
+					<button
+						onClick={prevSlide}
+						className='absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white rounded-full w-10 h-10 flex items-center justify-center cursor-pointer'
+					>
+						←
+					</button>
+
 					<motion.div
 						className='flex space-x-4 w-[1200px] mx-auto pt-[20px]'
 						drag='x'
@@ -244,14 +252,21 @@ const EliteTrader = () => {
 								isHovered={hoveredIndex === index}
 								onHoverStart={() => setHoveredIndex(index as number)}
 								onHoverEnd={() => setHoveredIndex(null)}
+								withoutBg
 							/>
 						))}
 					</motion.div>
 
+					{/* Кнопка вправо */}
+					<button
+						onClick={nextSlide}
+						className='absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white rounded-full w-10 h-10 flex items-center justify-center cursor-pointer'
+					>
+						→
+					</button>
+
 					{/* Градиент справа */}
 					<div className='absolute right-0 top-0 bottom-0 w-[100px] z-10 bg-gradient-to-l from-[#151515] to-transparent pointer-events-none'></div>
-
-					{/* Кнопки */}
 				</div>
 			</div>
 
