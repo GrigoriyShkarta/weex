@@ -1,20 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Card from '../../components/Card'
+import useMobileDetection from '../../utils/useMobileDetection'
 
 const Carousel = ({ title, cardCount }: any) => {
 	const [currentIndex, setCurrentIndex] = useState(0)
-	const [isMobile, setIsMobile] = useState(false)
-
-	// Check if mobile on mount and resize
-	useEffect(() => {
-		const checkIfMobile = () => {
-			setIsMobile(window.innerWidth <= 768)
-		}
-
-		checkIfMobile()
-		window.addEventListener('resize', checkIfMobile)
-		return () => window.removeEventListener('resize', checkIfMobile)
-	}, [])
+	const isMobile = useMobileDetection()
 
 	// Calculate offset based on card width (296px = card + gap)
 	const offset = -currentIndex * 296

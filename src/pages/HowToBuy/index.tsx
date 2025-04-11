@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
+import useMobileDetection from '../../utils/useMobileDetection'
 
 interface CryptoItem {
 	id: number
@@ -10,23 +11,7 @@ interface CryptoItem {
 }
 
 const HowToBuyCrypto: React.FC = () => {
-	const [isMobile, setIsMobile] = useState(false)
-
-	// Проверяем мобильное устройство при монтировании и изменении размера
-	useEffect(() => {
-		const checkIfMobile = () => {
-			setIsMobile(window.innerWidth <= 768) // 768px - типичный брейкпойнт для мобильных устройств
-		}
-
-		// Проверяем сразу при загрузке
-		checkIfMobile()
-
-		// Добавляем слушатель изменения размера
-		window.addEventListener('resize', checkIfMobile)
-
-		// Убираем слушатель при размонтировании
-		return () => window.removeEventListener('resize', checkIfMobile)
-	}, [])
+	const isMobile = useMobileDetection()
 
 	const cryptoList: CryptoItem[] = [
 		{

@@ -5,6 +5,7 @@ import CountdownTimer from './Timer'
 import TaskComponent from './Task'
 import Rules from './Rules'
 import FAQ from './FAQ'
+import useMobileDetection from '../../utils/useMobileDetection'
 
 const winners = [
 	{
@@ -86,23 +87,7 @@ const winners = [
 
 const Spin = () => {
 	const [index, setIndex] = useState(0)
-	const [isMobile, setIsMobile] = useState(false)
-
-	// Проверяем мобильное устройство при монтировании и изменении размера
-	useEffect(() => {
-		const checkIfMobile = () => {
-			setIsMobile(window.innerWidth <= 768) // 768px - типичный брейкпойнт для мобильных устройств
-		}
-
-		// Проверяем сразу при загрузке
-		checkIfMobile()
-
-		// Добавляем слушатель изменения размера
-		window.addEventListener('resize', checkIfMobile)
-
-		// Убираем слушатель при размонтировании
-		return () => window.removeEventListener('resize', checkIfMobile)
-	}, [])
+	const isMobile = useMobileDetection()
 
 	useEffect(() => {
 		const interval = setInterval(() => {

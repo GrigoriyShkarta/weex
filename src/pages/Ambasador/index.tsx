@@ -1,21 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import VideoModal from '../../components/VideoModal'
+import useMobileDetection from '../../utils/useMobileDetection'
 
 const AmbassadorPage: React.FC = () => {
-	const [isMobile, setIsMobile] = useState(false)
 	const [showModal, setShowModal] = useState(false)
-
-	useEffect(() => {
-		const checkIfMobile = () => {
-			setIsMobile(window.innerWidth <= 768) // 768px - типичный брейкпойнт для мобильных устройств
-		}
-
-		checkIfMobile()
-
-		window.addEventListener('resize', checkIfMobile)
-
-		return () => window.removeEventListener('resize', checkIfMobile)
-	}, [])
+	const isMobile = useMobileDetection()
 
 	useEffect(() => {
 		if (isMobile) {

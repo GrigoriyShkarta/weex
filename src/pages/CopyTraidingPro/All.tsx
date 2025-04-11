@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Card from '../../components/Card'
+import useMobileDetection from '../../utils/useMobileDetection'
 
 const All = () => {
 	const [activeTab, setActiveTab] = useState('pnl3w')
-	const [isMobile, setIsMobile] = useState(false)
+	const isMobile = useMobileDetection()
 
 	const tabs = [
 		{ id: 'pnl3w', label: 'Total PnL (3W)' },
@@ -15,22 +16,6 @@ const All = () => {
 		{ id: 'totaltrades', label: 'Total trades' },
 		{ id: 'followers', label: 'Followers' },
 	]
-
-	// Проверяем мобильное устройство при монтировании и изменении размера
-	useEffect(() => {
-		const checkIfMobile = () => {
-			setIsMobile(window.innerWidth <= 768) // 768px - типичный брейкпойнт для мобильных устройств
-		}
-
-		// Проверяем сразу при загрузке
-		checkIfMobile()
-
-		// Добавляем слушатель изменения размера
-		window.addEventListener('resize', checkIfMobile)
-
-		// Убираем слушатель при размонтировании
-		return () => window.removeEventListener('resize', checkIfMobile)
-	}, [])
 
 	return (
 		<div className='flex flex-col justify-between items-center mt-[70px] w-full'>

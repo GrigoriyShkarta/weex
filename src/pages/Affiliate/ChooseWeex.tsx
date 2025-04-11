@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import useMobileDetection from '../../utils/useMobileDetection'
 
 interface GraphPoint {
 	id: number
@@ -12,24 +13,7 @@ interface GraphPoint {
 
 const ChooseWeex = () => {
 	const [activePoint, setActivePoint] = useState<number>(1)
-
-	const [isMobile, setIsMobile] = useState(false)
-
-	// Проверяем мобильное устройство при монтировании и изменении размера
-	useEffect(() => {
-		const checkIfMobile = () => {
-			setIsMobile(window.innerWidth <= 768) // 768px - типичный брейкпойнт для мобильных устройств
-		}
-
-		// Проверяем сразу при загрузке
-		checkIfMobile()
-
-		// Добавляем слушатель изменения размера
-		window.addEventListener('resize', checkIfMobile)
-
-		// Убираем слушатель при размонтировании
-		return () => window.removeEventListener('resize', checkIfMobile)
-	}, [])
+	const isMobile = useMobileDetection()
 
 	const graphPoints: GraphPoint[] = [
 		{

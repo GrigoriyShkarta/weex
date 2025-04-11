@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Fragment } from 'react/jsx-runtime'
+import useMobileDetection from '../../utils/useMobileDetection'
 
 interface AdvantageItem {
 	id: number
@@ -41,23 +42,7 @@ const advantageItems: AdvantageItem[] = [
 
 const HomeAdvantage = () => {
 	const [activeId, setActiveId] = useState<number>(advantageItems[0].id)
-	const [isMobile, setIsMobile] = useState(false)
-
-	// Проверяем мобильное устройство при монтировании и изменении размера
-	useEffect(() => {
-		const checkIfMobile = () => {
-			setIsMobile(window.innerWidth <= 768) // 768px - типичный брейкпойнт для мобильных устройств
-		}
-
-		// Проверяем сразу при загрузке
-		checkIfMobile()
-
-		// Добавляем слушатель изменения размера
-		window.addEventListener('resize', checkIfMobile)
-
-		// Убираем слушатель при размонтировании
-		return () => window.removeEventListener('resize', checkIfMobile)
-	}, [])
+	const isMobile = useMobileDetection()
 
 	const handleMouseEnter = (id: number) => {
 		setActiveId(id)

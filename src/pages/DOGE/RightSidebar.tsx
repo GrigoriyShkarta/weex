@@ -108,7 +108,7 @@ const RightSidebar: React.FC = () => {
 		<div className='w-[296px] max-sm:w-full max-sm:mt-[14.9vw]'>
 			{/* Converter Section */}
 			<div className=''>
-				<h2 className='text-[18px] font-[500]'>Sign Up to Buy WEEX Token</h2>
+				<h2 className='text-[18px] font-[500]'>Sign Up to Buy Dogecoin</h2>
 				<p className='text-[14px] mt-[16px] text-[#8b8b8e]'>
 					Start with just $10
 				</p>
@@ -185,7 +185,7 @@ const RightSidebar: React.FC = () => {
 								alt='WEEX Token'
 								className='w-5 h-5 mr-2 rounded-full'
 							/>
-							<span>WXT</span>
+							<span>DOGE</span>
 						</div>
 					</div>
 				</div>
@@ -206,7 +206,7 @@ const RightSidebar: React.FC = () => {
 						alt='WEEX Token'
 						className='w-8 h-8 rounded-full'
 					/>
-					<h2 className='text-[18px] font-[700]'>WEEX Token Price</h2>
+					<h2 className='text-[18px] font-[700]'>Dogecoin Price</h2>
 				</div>
 
 				<div className='flex items-center flex-wrap mt-[16px] gap-[29px]'>
@@ -229,13 +229,13 @@ const RightSidebar: React.FC = () => {
 				</div>
 
 				<p className='mt-[16px] p-[16px] text-[14px] rounded-[16px] border border-[#282828] text-[#d1d1d2]'>
-					The current WEEX Token price is{' '}
+					The current Dogecoin price is{' '}
 					<span className='font-bold'>${data['DOGE-USD'].PRICE}</span>, with a
 					24-hour trading volume of <span className='font-bold'>$9.32M</span>.
-					WEEX Token has{' '}
+					Dogecoin has{' '}
 					<span className='font-bold text-green-500'>increased</span> by{' '}
-					<span className='font-bold'>4.84</span>% in the past 24 hours. WEEX
-					Token's market cap currently sits at{' '}
+					<span className='font-bold'>4.84</span>% in the past 24 hours.
+					Dogecoin market cap currently sits at{' '}
 					<span className='font-bold'>$0</span>. There are currently{' '}
 					<span className='font-bold'>0.00 WXT</span> in circulation out of a
 					maximum supply of <span className='font-bold'>0.00 WXT</span>.
